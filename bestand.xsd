@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema version="1.0"
+            targetNamespace="urn:dbs:artikelliste"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="urn:dbs:artikelliste"
+            elementFormDefault="qualified">
+
+    <xsd:complexType name="CT_CurrencyValue">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:decimal">
+                <xsd:attribute name="currency" default="EUR">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="EUR"/>
+                            <xsd:enumeration value="DOL"/>
+                            <xsd:enumeration value="YEN"/>
+                            <xsd:enumeration value="YUAN"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:element name="ekpreis" type="tns:CT_CurrencyValue"/>
+
+    <xsd:element name="bestand">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="artikelgruppen">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="artikelgruppe" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="bezeichnung" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="gid" type="xsd:ID" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="artikelliste">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="artikel" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="artbez" type="xsd:string"/>
+                                        <xsd:element ref="tns:ekpreis"/>
+                                        <xsd:element name="vpreis" type="tns:CT_CurrencyValue"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="artnr" type="xsd:ID" use="required"/>
+                                    <xsd:attribute name="gruppe" type="xsd:IDREF" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

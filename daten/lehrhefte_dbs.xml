@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<lehrhefte_dbs>
+    <lehrheft>
+        <titel nr="dbs7-2003">Objektrelationale Datenbanken</titel>
+        <autor>
+            <familienname>Witt</familienname>
+            <vorname>Kurt</vorname>
+            <vorname>Ulrich</vorname>
+        </autor>
+        <preis>9.99</preis>
+    </lehrheft>
+    <lehrheft>
+        <titel nr="dbs6-2005">Datenbanksystemtechnik</titel>
+        <autor>
+            <familienname>Vossen</familienname>
+            <vorname>Gottfried</vorname>
+        </autor>
+        <preis>9.99</preis>
+    </lehrheft>
+    <lehrheft>
+        <titel nr="dbs3-2005">Die Datenbanksprache SQL</titel>
+        <autor>
+            <familienname>Hartmann</familienname>
+            <vorname>Uwe</vorname>
+        </autor>
+        <autor>
+            <familienname>Vossen</familienname>
+            <vorname>Gottfried</vorname>
+        </autor>
+        <preis>19.99</preis>
+    </lehrheft>
+    <lehrheft>
+        <titel>XML und Datenbanken</titel>
+        <autor>
+            <familienname>Sauer</familienname>
+            <vorname>Petra</vorname>
+        </autor>
+        <preis>10.99</preis>
+    </lehrheft>
+</lehrhefte_dbs>

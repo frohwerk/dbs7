@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bestand xmlns="urn:dbs:artikelliste"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:dbs:artikelliste bestand.xsd">
+    <artikelgruppen>
+        <artikelgruppe gid="G10">
+            <bezeichnung>Workstation</bezeichnung>
+        </artikelgruppe>
+        <artikelgruppe gid="G20">
+            <bezeichnung>Server</bezeichnung>
+        </artikelgruppe>
+        <artikelgruppe gid="G30">
+            <bezeichnung>Monitor</bezeichnung>
+        </artikelgruppe>
+    </artikelgruppen>
+    <artikelliste>
+        <artikel artnr="A1000" gruppe="G10">
+            <artbez>Transtec 800</artbez>
+            <ekpreis>720.00</ekpreis>
+            <vpreis>749.00</vpreis>
+        </artikel>
+        <artikel artnr="A1100" gruppe="G30">
+            <artbez>Trinitron 17"</artbez>
+            <ekpreis>375.00</ekpreis>
+            <vpreis>399.00</vpreis>
+        </artikel>
+    </artikelliste>
+</bestand>

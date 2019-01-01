@@ -1,0 +1,20 @@
+<!ELEMENT bestand (artikelgruppen,artikelliste)>
+
+<!ELEMENT artikelgruppen (artikelgruppe)*>
+
+<!ELEMENT artikelgruppe (bezeichnung)>
+
+<!ATTLIST artikelgruppe  gid  ID  #REQUIRED>
+<!ELEMENT bezeichnung    (#PCDATA)>
+
+<!ELEMENT artikelliste (artikel)*>
+
+<!ELEMENT artikel (artbez,ekpreis,vpreis)>
+<!ATTLIST artikel
+        artnr  ID     #REQUIRED
+        gid    IDREF  #REQUIRED>
+<!ELEMENT artbez   (#PCDATA)>
+<!ELEMENT ekpreis  (#PCDATA)>
+<!ATTLIST ekpreis  currency  (EUR|DOL|YEN|YUAN)  "EUR">
+<!ELEMENT vpreis   (#PCDATA)>
+<!ATTLIST vpreis   currency  (EUR|DOL|YEN|YUAN)  "EUR">
